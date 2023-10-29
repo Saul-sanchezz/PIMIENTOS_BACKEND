@@ -3,6 +3,7 @@ const express = require("express");
 // import dotenv from "dotenv"
 // import cors from "cors"
 // import conectarDB from "./config/db.js"
+const conectarDB = require("./config/db.js")
 // import usuarioRoutes from "./routes/usuarioRoutes.js"
 // import manifiestoRoutes from "./routes/manifiestoRoutes.js"
 // import tamanoRoutes from "./routes/tamanoRoutes.js"
@@ -26,7 +27,7 @@ app.use(express.json())
 
 // dotenv.config()
 
-// conectarDB()
+conectarDB()
 
 // const whitelist = [
 //   process.env.FRONTEND_URL,

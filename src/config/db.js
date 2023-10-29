@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const option = {
   autoIndex: false,
@@ -16,4 +17,4 @@ const conectarDB = async () => {
   }
 }
 
-export default conectarDB
+module.exports = conectarDB
