@@ -46,9 +46,9 @@ conectarDB()
 
 // app.use(cors(corsOptions))
 
-app.use("/", (req, res) => {
-  res.json({"msg": "servidor corriendo..."})
-})
+// app.use("/", (req, res) => {
+//   res.json({"msg": "servidor corriendo..."})
+// })
 app.use("/api/usuarios", usuarioRoutes)
 // app.use("/api/nacional-manifiestos", manifiestoRoutes)
 // app.use("/api/tamanos", tamanoRoutes)
