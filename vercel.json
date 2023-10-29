@@ -2,7 +2,7 @@
 {
   "builds": [
     {
-      "src": ".dist/index.js",
+      "src": "./dist/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -11,5 +11,6 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ]
+  ],
+  "buildCommand": "npm run build"
 }
