@@ -24,25 +24,25 @@ const express = require("express");
 const app = express()
 app.use(express.json())
 
-dotenv.config()
+// dotenv.config()
 
-conectarDB()
+// conectarDB()
 
-const whitelist = [
-  process.env.FRONTEND_URL,
-]
+// const whitelist = [
+//   process.env.FRONTEND_URL,
+// ]
 
-const corsOptions = {
-  origin: function(origin, callback) {
-    if (whitelist.includes(origin)) {
-      callback(null, true)
-    } else {
-      callback(new Error("Error de cors"))
-    }
-  }
-}
+// const corsOptions = {
+//   origin: function(origin, callback) {
+//     if (whitelist.includes(origin)) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error("Error de cors"))
+//     }
+//   }
+// }
 
-app.use(cors(corsOptions))
+// app.use(cors(corsOptions))
 
 app.use("/", (req, res) => {
   res.json({"msg": "servidor corriendo..."})
