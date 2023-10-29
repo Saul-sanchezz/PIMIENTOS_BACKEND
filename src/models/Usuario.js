@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import bcrypt from "bcrypt"
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const UsuarioSchema = mongoose.Schema({
   nombre: {
@@ -66,7 +66,7 @@ UsuarioSchema.methods.comprobarPassword = async function (passwordFormulario) {
 
 const Usuario = mongoose.model("Usuario", UsuarioSchema)
 
-export default Usuario
+module.exports = Usuario
 
 
 

@@ -1,41 +1,37 @@
-import express from "express";
+const express = require("express")
 const router = express.Router()
-import { 
-  registrar, 
-  autenticar, 
-  confirmar, 
-  olvidePassword, 
-  comprobarToken, 
-  nuevoPassword,
-  perfil,
-  obtenerUsuarios,
-  obtenerUsuario,
-  editarUsuario,
-  eliminarUsuario,
-} from "../controllers/usuarioController.js";
-import checkAuth from "../middleware/checkAuth.js";
+const { registrar } = require("../controllers/usuarioController.js")
+// import { 
+//   registrar, 
+//   autenticar, 
+//   confirmar, 
+//   olvidePassword, 
+//   comprobarToken, 
+//   nuevoPassword,
+//   perfil,
+//   obtenerUsuarios,
+//   obtenerUsuario,
+//   editarUsuario,
+//   eliminarUsuario,
+// } from "../controllers/usuarioController.js";
 
-// Autenticacion, Registro y Confirmacion de Usuario
-router.post("/", registrar) // crea un nuevo usuario
-router.get("/", obtenerUsuarios)
-router.post("/login", autenticar) // auntenticar usuario
-// para usar params debe ser metodo get
-router.get("/confirmar/:token", confirmar) // confirmar usuario 
-router.post("/olvide-password", olvidePassword) // olvide contrasena
-//router.get("/olvide-password/:token", comprobarToken) // comprovar token
-// router.post("/olvide-password/:token", nuevoPassword) 
-// se remplazan estas rutas asi
-router.route("/olvide-password/:token")
-  .get(comprobarToken)
-  .post(nuevoPassword)
+// import checkAuth from "../middleware/checkAuth.js";
 
-  // middleware de untenticacion
-router.get("/perfil", checkAuth, perfil)
-router.get("/ver/:id", obtenerUsuario)
-router.put("/editar/:id", editarUsuario)
-router.delete("/eliminar/:id", eliminarUsuario)
+router.post("/", registrar) 
+// router.get("/", obtenerUsuarios)
+// router.post("/login", autenticar) 
+// router.get("/confirmar/:token", confirmar) 
+// router.post("/olvide-password", olvidePassword)
+// router.route("/olvide-password/:token")
+//   .get(comprobarToken)
+//   .post(nuevoPassword)
 
-export default router
+// router.get("/perfil", checkAuth, perfil)
+// router.get("/ver/:id", obtenerUsuario)
+// router.put("/editar/:id", editarUsuario)
+// router.delete("/eliminar/:id", eliminarUsuario)
+
+module.exports = router
 
 
 

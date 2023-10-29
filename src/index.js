@@ -5,6 +5,7 @@ const express = require("express");
 // import conectarDB from "./config/db.js"
 const conectarDB = require("./config/db.js")
 // import usuarioRoutes from "./routes/usuarioRoutes.js"
+const usuarioRoutes = require("./routes/usuarioRoutes.js")
 // import manifiestoRoutes from "./routes/manifiestoRoutes.js"
 // import tamanoRoutes from "./routes/tamanoRoutes.js"
 // import cultivoRoutes from "./routes/cultivoRoutes.js"
@@ -48,7 +49,7 @@ conectarDB()
 app.use("/", (req, res) => {
   res.json({"msg": "servidor corriendo..."})
 })
-// app.use("/api/usuarios", usuarioRoutes)
+app.use("/api/usuarios", usuarioRoutes)
 // app.use("/api/nacional-manifiestos", manifiestoRoutes)
 // app.use("/api/tamanos", tamanoRoutes)
 // app.use("/api/cultivos", cultivoRoutes)
