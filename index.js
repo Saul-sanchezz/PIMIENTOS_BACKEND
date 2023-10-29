@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
-import conectarDB from "./src/config/db.js"
+// import conectarDB from "./src/config/db.js"
 import usuarioRoutes from "./src/routes/usuarioRoutes.js"
 // import manifiestoRoutes from "./src/routes/manifiestoRoutes.js"
 // import tamanoRoutes from "./src/routes/tamanoRoutes.js"
@@ -46,7 +46,7 @@ app.use(cors(corsOptions))
 app.use("/", (req, res) => {
   res.json({"msg": "servidor corriendo..."})
 })
-app.use("/api/usuarios", usuarioRoutes)
+// app.use("/api/usuarios", usuarioRoutes)
 // app.use("/api/nacional-manifiestos", manifiestoRoutes)
 // app.use("/api/tamanos", tamanoRoutes)
 // app.use("/api/cultivos", cultivoRoutes)
