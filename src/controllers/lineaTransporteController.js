@@ -1,4 +1,4 @@
-import LineaTransporte from "../models/LineaTransporte.js"
+const LineaTransporte = require("../models/LineaTransporte.js");
 
 const registrarLineaTransporte = async (req, res) => {
   const { nombre } = req.body
@@ -120,7 +120,7 @@ const eliminarLineaTransporte = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarLineaTransporte,
   obtenerLineaTransportes,
   obtenerLineaTransporte,

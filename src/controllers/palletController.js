@@ -1,9 +1,9 @@
-import Pallet from "../models/Pallet.js"
-import Cultivo from "../models/Cultivo.js"
-import Marca from "../models/Marca.js"
-import Tamano from "../models/Tamano.js"
-import Envase from "../models/Envase.js"
-import ProductoInventario from "../models/productoInventario.js"
+const Pallet = require("../models/Pallet.js")
+const Cultivo = require("../models/Cultivo.js")
+const Marca = require("../models/Marca.js")
+const Tamano = require("../models/Tamano.js")
+const Envase = require("../models/Envase.js")
+const ProductoInventario = require("../models/productoInventario.js")
 
 //cultivos
 const BELL_PEPPER = "BELL PEPPER"
@@ -539,7 +539,7 @@ const buscarPorFecha = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarPallet,
   obtenerPallets,
   obtenerPallet,

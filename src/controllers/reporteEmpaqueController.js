@@ -1,4 +1,4 @@
-import EmpaqueReporte from "../models/ReporteEmpaque.js"
+const EmpaqueReporte = require("../models/ReporteEmpaque.js")
 
 const registrarReporteEmpaque = async (req, res) => {
   const { datosCalculoEmpaqueTotal, totalDeEmpaque, totalDeEmpaquePorProducto, pisoActual } = req.body
@@ -115,7 +115,7 @@ const eliminarReporteEmpaque = async (req, res) => {
 //   }
 // }
 
-export {
+module.exports = {
   registrarReporteEmpaque,
   obtenerReportesEmpaques,
   obtenerReporteEmpaque,

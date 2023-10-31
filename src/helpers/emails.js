@@ -1,6 +1,6 @@
-import nodemailer from "nodemailer"
+const nodemailer = require("nodemailer")
 
-export const emailRegistro = async (datos) => {
+const emailRegistro = async (datos) => {
   const { email, nombre, token } = datos
 
   const transport = nodemailer.createTransport({
@@ -30,7 +30,7 @@ export const emailRegistro = async (datos) => {
   })
 }
 
-export const emailOlvidePassword = async (datos) => {
+const emailOlvidePassword = async (datos) => {
   const { email, nombre, token } = datos
 
   const transport = nodemailer.createTransport({
@@ -53,4 +53,9 @@ export const emailOlvidePassword = async (datos) => {
     <p>Si tu no solicitaste este email, puedes ignorar el mensaje</p>
     `
   })
+}
+
+module.exports = {
+  emailRegistro,
+  emailOlvidePassword
 }

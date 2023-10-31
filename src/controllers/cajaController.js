@@ -1,4 +1,4 @@
-import Caja from "../models/Caja.js"
+const Caja = require("../models/Caja.js");
 
 const registrarCaja = async (req, res) => {
   const { numeroEconomico, placas } = req.body
@@ -123,7 +123,7 @@ const eliminarCaja = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarCaja,
   obtenerCajas,
   obtenerCaja,

@@ -1,8 +1,6 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
+const {
   registrarPallet,
   obtenerPallets,
   obtenerPallet,
@@ -10,7 +8,7 @@ import {
   eliminarPallet,
   obtenerDetalles,
   buscarPorFecha,
-} from "../controllers/palletController.js"
+} = require("../controllers/palletController.js")
 
 router.get("/", buscarPorFecha)
 router.route("/")
@@ -24,4 +22,4 @@ router.get("/obtener-detalles", obtenerDetalles)
 
 
 
-export default router
+module.exports = router

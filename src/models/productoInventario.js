@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const productoInventarioSchema = mongoose.Schema({
     nombre: {
@@ -26,4 +26,4 @@ const productoInventarioSchema = mongoose.Schema({
 
 const ProductoInventario = mongoose.model("ProductoInventario", productoInventarioSchema)
 
-export default ProductoInventario
+module.exports = ProductoInventario

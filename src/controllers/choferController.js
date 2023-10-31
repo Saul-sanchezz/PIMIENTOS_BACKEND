@@ -1,4 +1,4 @@
-import Chofer from "../models/Chofer.js"
+const Chofer = require("../models/Chofer.js")
 
 const registrarChofer = async (req, res) => {
   const { nombre, licencia } = req.body
@@ -121,7 +121,7 @@ const eliminarChofer = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarChofer,
   obtenerChoferes,
   obtenerChofer,

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const TamanoSchema = mongoose.Schema({
     nombre: {
@@ -15,4 +15,4 @@ const TamanoSchema = mongoose.Schema({
 
 const Tamano = mongoose.model("Tamano", TamanoSchema)
 
-export default Tamano
+module.exports = Tamano

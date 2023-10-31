@@ -1,4 +1,4 @@
-import PisoActual from "../models/PisoActual.js"
+const PisoActual = require("../models/PisoActual.js")
 
 const registrarPisoActual = async (req, res) => {
   const { cantidadCajas, cultivo, tamano, marca, envase } = req.body
@@ -113,7 +113,7 @@ const eliminarPisoActualId = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarPisoActual,
   obtenerPisoActualAll,
   obtenerPisoActualId,

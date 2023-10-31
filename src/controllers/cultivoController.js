@@ -1,4 +1,4 @@
-import Cultivo from "../models/Cultivo.js"
+const Cultivo = require("../models/Cultivo.js");
 
 const registrarCultivo = async (req, res) => {
   const { nombre } = req.body
@@ -121,7 +121,7 @@ const eliminarCultivo = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarCultivo,
   obtenerCultivos,
   obtenerCultivo,

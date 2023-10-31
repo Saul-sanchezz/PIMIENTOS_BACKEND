@@ -1,4 +1,4 @@
-import Trailer from "../models/Trailer.js"
+const Trailer = require("../models/Trailer.js")
 
 const registrarTrailer = async (req, res) => {
   const { numeroEconomico, placas, marca, modelo } = req.body
@@ -124,7 +124,7 @@ const eliminarTrailer = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarTrailer,
   obtenerTrailers,
   obtenerTrailer,

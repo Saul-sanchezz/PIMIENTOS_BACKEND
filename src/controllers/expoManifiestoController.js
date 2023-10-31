@@ -1,13 +1,13 @@
-import ExpoManifiesto from "../models/ExpoManifiesto.js"
-import Empresa from "../models/Empresa.js"
-import Chofer from "../models/Chofer.js"
-import Trailer from "../models/Trailer.js"
-import Caja from "../models/Caja.js"
-import LineaTransporte from "../models/LineaTransporte.js"
-import Cultivo from "../models/Cultivo.js"
-import Tamano from "../models/Tamano.js"
-import Marca from "../models/Marca.js"
-import Envase from "../models/Envase.js"
+const ExpoManifiesto = require("../models/ExpoManifiesto.js")
+const Empresa = require("../models/Empresa.js")
+const Chofer = require("../models/Chofer.js")
+const Trailer = require("../models/Trailer.js")
+const Caja = require("../models/Caja.js")
+const LineaTransporte = require("../models/LineaTransporte.js")
+const Cultivo = require("../models/Cultivo.js")
+const Tamano = require("../models/Tamano.js")
+const Marca = require("../models/Marca.js")
+const Envase = require("../models/Envase.js")
 
 const registrarExpoManifiesto = async (req, res) => {
   const { nroManifiesto, listaProductos, } = req.body
@@ -186,7 +186,7 @@ const obtenerManifiestosParaReporte = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarExpoManifiesto,
   obtenerExpoManifiestos,
   obtenerExpoManifiesto,

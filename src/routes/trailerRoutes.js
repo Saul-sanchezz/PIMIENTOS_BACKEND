@@ -1,14 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
+const  {
   registrarTrailer,
   obtenerTrailers,
   obtenerTrailer,
   editarTrailer,
   eliminarTrailer,
-} from "../controllers/trailerController.js"
+} = require("../controllers/trailerController.js")
 
 router.route("/")
   .post(registrarTrailer)
@@ -20,4 +18,4 @@ router.delete("/eliminar/:id", eliminarTrailer)
 
 
 
-export default router
+module.exports = router

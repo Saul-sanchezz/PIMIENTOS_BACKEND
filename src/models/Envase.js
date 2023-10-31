@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const EnvaseSchema = mongoose.Schema({
     nombre: {
@@ -15,4 +15,4 @@ const EnvaseSchema = mongoose.Schema({
 
 const Envase = mongoose.model("Envase", EnvaseSchema)
 
-export default Envase
+module.exports = Envase

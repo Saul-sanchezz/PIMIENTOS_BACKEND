@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const PisoAnteriorSchema = mongoose.Schema({
     cantidadCajas: {
@@ -37,4 +37,4 @@ const PisoAnteriorSchema = mongoose.Schema({
 
 const PisoAnterior = mongoose.model("PisoAnterior", PisoAnteriorSchema)
 
-export default PisoAnterior
+module.exports = PisoAnterior

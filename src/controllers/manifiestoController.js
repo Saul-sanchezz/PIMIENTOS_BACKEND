@@ -1,11 +1,11 @@
-import NacionalManifiesto from "../models/ManifiestoNacional.js"
-import Empresa from "../models/Empresa.js"
-import Chofer from "../models/Chofer.js"
-import Trailer from "../models/Trailer.js"
-import Caja from "../models/Caja.js"
-import LineaTransporte from "../models/LineaTransporte.js"
-import Cultivo from "../models/Cultivo.js"
-import Tamano from "../models/Tamano.js"
+const NacionalManifiesto = require("../models/ManifiestoNacional.js")
+const Empresa = require("../models/Empresa.js")
+const Chofer = require("../models/Chofer.js")
+const Trailer = require("../models/Trailer.js")
+const Caja = require("../models/Caja.js")
+const LineaTransporte = require("../models/LineaTransporte.js")
+const Cultivo = require("../models/Cultivo.js")
+const Tamano = require("../models/Tamano.js")
 
 
 const resgistrarManifiesto = async (req, res) => {
@@ -205,7 +205,7 @@ const obtenerDetalles = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   resgistrarManifiesto,
   obtenerManifiestos,
   obtenerManifiesto,

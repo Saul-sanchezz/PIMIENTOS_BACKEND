@@ -1,13 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-import {
+const {
   registrarEnvase,
   obtenerEnvases,
   obtenerEnvase,
   editarEnvase,
   eliminarEnvase,
-} from "../controllers/envaseController.js"
+} = require("../controllers/envaseController.js")
 
 router.route("/")
   .post(registrarEnvase)
@@ -19,4 +18,4 @@ router.delete("/eliminar/:id", eliminarEnvase)
 
 
 
-export default router
+module.exports = router

@@ -1,4 +1,4 @@
-import Envase from "../models/Envase.js"
+const Envase = require("../models/Envase.js")
 
 const registrarEnvase = async (req, res) => {
   const { nombre } = req.body
@@ -120,7 +120,7 @@ const eliminarEnvase = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarEnvase,
   obtenerEnvases,
   obtenerEnvase,

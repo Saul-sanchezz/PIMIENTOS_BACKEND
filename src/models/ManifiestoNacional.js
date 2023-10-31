@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const NacionalManifiestoSchema = mongoose.Schema({
     cajas: {
@@ -113,6 +113,6 @@ const NacionalManifiestoSchema = mongoose.Schema({
 
 const NacionalManifiesto = mongoose.model("NacionalManifiesto", NacionalManifiestoSchema)
 
-export default NacionalManifiesto
+module.exports = NacionalManifiesto
 
 

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const ReporteSchema = mongoose.Schema({
   datosCalculoEmpaqueTotal: [{
@@ -127,4 +127,4 @@ const ReporteSchema = mongoose.Schema({
 
 const EmpaqueReporte = mongoose.model("EmpaqueReporte", ReporteSchema)
 
-export default EmpaqueReporte
+module.exports = EmpaqueReporte

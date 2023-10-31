@@ -1,13 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-import {
+const  {
   registrarTamano,
   obtenerTamanos,
   obtenerTamano,
   editarTamano,
   eliminarTamano,
-} from "../controllers/tamanoController.js"
+} = require("../controllers/tamanoController.js")
 
 router.route("/")
   .post(registrarTamano)
@@ -19,4 +18,4 @@ router.delete("/eliminar/:id", eliminarTamano)
 
 
 
-export default router
+module.exports = router

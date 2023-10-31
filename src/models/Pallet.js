@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const PalletSchema = mongoose.Schema({
   cultivo: {
@@ -44,4 +44,4 @@ const PalletSchema = mongoose.Schema({
 
 const Pallet = mongoose.model("Pallet", PalletSchema)
 
-export default Pallet
+module.exports = Pallet

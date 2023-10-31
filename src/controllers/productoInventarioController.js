@@ -1,6 +1,6 @@
-import ProductoInventario from "../models/productoInventario.js"
-import Marca from "../models/Marca.js"
-import Envase from "../models/Envase.js"
+const ProductoInventario = require("../models/productoInventario.js")
+const Marca = require("../models/Marca.js")
+const Envase = require("../models/Envase.js")
 
 const registrarProducto = async (req, res) => {
   const { nombre, marca, cantidad } = req.body
@@ -139,7 +139,7 @@ const obtenerDetalles = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarProducto,
   obtenerProductos,
   obtenerProducto,

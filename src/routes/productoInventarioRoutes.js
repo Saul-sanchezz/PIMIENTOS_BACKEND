@@ -1,15 +1,13 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
+const  {
   registrarProducto,
   obtenerProductos,
   obtenerProducto,
   editarProducto,
   eliminarProducto,
   obtenerDetalles,
-} from "../controllers/productoInventarioController.js"
+} = require("../controllers/productoInventarioController.js")
 
 router.route("/")
   .post(registrarProducto)
@@ -22,4 +20,4 @@ router.get("/obtener-detalles", obtenerDetalles)
 
 
 
-export default router
+module.exports = router

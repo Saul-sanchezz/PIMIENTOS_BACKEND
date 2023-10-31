@@ -1,4 +1,4 @@
-import Tamano from "../models/Tamano.js"
+const Tamano = require("../models/Tamano.js")
 
 const registrarTamano = async (req, res) => {
   const { nombre } = req.body
@@ -120,7 +120,7 @@ const eliminarTamano = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarTamano,
   obtenerTamanos,
   obtenerTamano,

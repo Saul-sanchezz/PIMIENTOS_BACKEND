@@ -1,4 +1,4 @@
-import Empresa from "../models/Empresa.js"
+const Empresa = require("../models/Empresa.js")
 
 const registrarEmpresa = async (req, res) => {
   const { nombre, direccion, ciudad, rfc, tipo } = req.body
@@ -134,7 +134,7 @@ const eliminarEmpresa = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarEmpresa,
   obtenerEmpresas,
   obtenerEmpresa,

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const CajaSchema = mongoose.Schema({
     numeroEconomico: {
@@ -21,4 +21,4 @@ const CajaSchema = mongoose.Schema({
 
 const Caja = mongoose.model("Caja", CajaSchema)
 
-export default Caja
+module.exports = Caja

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const ExpoManifiestoSchema = mongoose.Schema({
   nroManifiesto: {
@@ -93,4 +93,4 @@ const ExpoManifiestoSchema = mongoose.Schema({
 
 const ExpoManifiesto = mongoose.model("ExpoManifiesto", ExpoManifiestoSchema)
 
-export default ExpoManifiesto
+module.exports = ExpoManifiesto

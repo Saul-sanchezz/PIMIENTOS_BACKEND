@@ -1,14 +1,13 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-import {
+const {
   resgistrarManifiesto,
   obtenerManifiestos,
   obtenerManifiesto,
   editarManifiesto,
   eliminarManifiesto,
   obtenerDetalles,
-} from "../controllers/manifiestoController.js"
+} = require("../controllers/manifiestoController.js")
 
 router.route("/")
   .post(resgistrarManifiesto)
@@ -20,4 +19,4 @@ router.put("/editar/:id", editarManifiesto)
 router.delete("/eliminar/:id", eliminarManifiesto)
 
 
-export default router
+module.exports = router

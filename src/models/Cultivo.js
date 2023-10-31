@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const CultivoSchema = mongoose.Schema({
     nombre: {
@@ -15,4 +15,4 @@ const CultivoSchema = mongoose.Schema({
 
 const Cultivo = mongoose.model("Cultivo", CultivoSchema)
 
-export default Cultivo
+module.exports = Cultivo

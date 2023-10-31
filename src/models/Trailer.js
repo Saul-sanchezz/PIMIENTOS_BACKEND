@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const TrailerSchema = mongoose.Schema({
     numeroEconomico: {
@@ -31,4 +31,4 @@ const TrailerSchema = mongoose.Schema({
 
 const Trailer = mongoose.model("Trailer", TrailerSchema)
 
-export default Trailer
+module.exports = Trailer

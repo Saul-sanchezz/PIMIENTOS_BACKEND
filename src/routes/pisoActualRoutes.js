@@ -1,14 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
+const  {
   registrarPisoActual,
   obtenerPisoActualAll,
   obtenerPisoActualId,
   editarPisoActualId,
   eliminarPisoActualId,
-} from "../controllers/pisoActualController.js"
+} = require("../controllers/pisoActualController.js")
 
 router.route("/")
   .post(registrarPisoActual)
@@ -20,4 +18,4 @@ router.delete("/eliminar/:id", eliminarPisoActualId)
 
 
 
-export default router
+module.exports = router

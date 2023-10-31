@@ -1,7 +1,6 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-import {
+const {
   registrarExpoManifiesto,
   obtenerExpoManifiestos,
   obtenerExpoManifiesto,
@@ -9,7 +8,7 @@ import {
   eliminarExpoManifiesto,
   obtenerDetalles,
   obtenerManifiestosParaReporte
-} from "../controllers/expoManifiestoController.js"
+} = require("../controllers/expoManifiestoController.js")
 
 router.route("/")
   .post(registrarExpoManifiesto)
@@ -24,4 +23,4 @@ router.get("/obtener-manifiestos-reporte", obtenerManifiestosParaReporte)
 
 
 
-export default router
+module.exports = router

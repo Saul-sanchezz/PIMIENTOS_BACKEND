@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const PisoActualSchema = mongoose.Schema({
     cantidadCajas: {
@@ -37,4 +37,4 @@ const PisoActualSchema = mongoose.Schema({
 
 const PisoActual = mongoose.model("PisoActual", PisoActualSchema)
 
-export default PisoActual
+module.exports = PisoActual

@@ -1,14 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
+const {
   registrarChofer,
   obtenerChoferes,
   obtenerChofer,
   editarChofer,
   eliminarChofer,
-} from "../controllers/choferController.js"
+} = require("../controllers/choferController.js");
 
 router.route("/")
   .post(registrarChofer)
@@ -19,5 +17,4 @@ router.put("/editar/:id", editarChofer)
 router.delete("/eliminar/:id", eliminarChofer)
 
 
-
-export default router
+module.exports = router

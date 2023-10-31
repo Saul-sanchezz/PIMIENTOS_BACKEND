@@ -1,27 +1,25 @@
 const express = require("express");
-// import express from "express"
-// import dotenv from "dotenv"
+// const dotenv = require("dotenv")
 // import cors from "cors"
-// import conectarDB from "./config/db.js"
+// const cors = require("cors")
 const conectarDB = require("./config/db.js")
-// import usuarioRoutes from "./routes/usuarioRoutes.js"
 const usuarioRoutes = require("./routes/usuarioRoutes.js")
-// import manifiestoRoutes from "./routes/manifiestoRoutes.js"
-// import tamanoRoutes from "./routes/tamanoRoutes.js"
-// import cultivoRoutes from "./routes/cultivoRoutes.js"
-// import marcaRoutes from "./routes/marcaRoutes.js"
-// import envaseRoutes from "./routes/envaseRoutes.js"
-// import expoManifiestoRotes from "./routes/expoManifiestoRoutes.js"
-// import nombreEmpresaRoutes from "./routes/nombreEmpresaRoutes.js"
-// import lineaTransporteRoutes from "./routes/lineaTransporteRoutes.js"
-// import choferRoutes from "./routes/choferRoutes.js"
-// import trailerRoutes from "./routes/trailerRoutes.js"
-// import cajaRoutes from "./routes/cajaRoutes.js"
-// import pisoAnteriorRoutes from "./routes/pisoAnteriorRoutes.js"
-// import pisoActualRoutes from "./routes/pisoActualRoutes.js"
-// import palletRoutes from "./routes/palletRoutes.js"
-// import productoInventarioRoutes from "./routes/productoInventarioRoutes.js"
-// import reporteEmpaqueRoutes from "./routes/reporteEmpaqueRoutes.js"
+const manifiestoRoutes = require("./routes/manifiestoRoutes.js")
+const tamanoRoutes = require("./routes/tamanoRoutes.js")
+const cultivoRoutes = require("./routes/cultivoRoutes.js")
+const marcaRoutes = require("./routes/marcaRoutes.js")
+const envaseRoutes = require("./routes/envaseRoutes.js")
+const expoManifiestoRotes = require("./routes/expoManifiestoRoutes.js")
+const nombreEmpresaRoutes = require("./routes/nombreEmpresaRoutes.js")
+const lineaTransporteRoutes = require("./routes/lineaTransporteRoutes.js")
+const choferRoutes = require("./routes/choferRoutes.js")
+const trailerRoutes = require("./routes/trailerRoutes.js")
+const cajaRoutes = require("./routes/cajaRoutes.js")
+const pisoAnteriorRoutes = require("./routes/pisoAnteriorRoutes.js")
+const pisoActualRoutes = require("./routes/pisoActualRoutes.js")
+const palletRoutes = require("./routes/palletRoutes.js")
+const productoInventarioRoutes = require("./routes/productoInventarioRoutes.js")
+const reporteEmpaqueRoutes= require("./routes/reporteEmpaqueRoutes.js")
 
 const app = express()
 app.use(express.json())
@@ -46,26 +44,23 @@ conectarDB()
 
 // app.use(cors(corsOptions))
 
-// app.use("/", (req, res) => {
-//   res.json({"msg": "servidor corriendo..."})
-// })
 app.use("/api/usuarios", usuarioRoutes)
-// app.use("/api/nacional-manifiestos", manifiestoRoutes)
-// app.use("/api/tamanos", tamanoRoutes)
-// app.use("/api/cultivos", cultivoRoutes)
-// app.use("/api/marcas", marcaRoutes)
-// app.use("/api/envases", envaseRoutes)
-// app.use("/api/expo-manifiestos", expoManifiestoRotes)
-// app.use("/api/empresas", nombreEmpresaRoutes)
-// app.use("/api/linea-transportes", lineaTransporteRoutes)
-// app.use("/api/choferes", choferRoutes)
-// app.use("/api/trailers", trailerRoutes)
-// app.use("/api/cajas", cajaRoutes)
-// app.use("/api/piso-anterior", pisoAnteriorRoutes)
-// app.use("/api/piso-actual", pisoActualRoutes)
-// app.use("/api/pallets", palletRoutes)
-// app.use("/api/inventario-productos", productoInventarioRoutes)
-// app.use("/api/reportes-empaque", reporteEmpaqueRoutes)
+app.use("/api/nacional-manifiestos", manifiestoRoutes)
+app.use("/api/tamanos", tamanoRoutes)
+app.use("/api/cultivos", cultivoRoutes)
+app.use("/api/marcas", marcaRoutes)
+app.use("/api/envases", envaseRoutes)
+app.use("/api/expo-manifiestos", expoManifiestoRotes)
+app.use("/api/empresas", nombreEmpresaRoutes)
+app.use("/api/linea-transportes", lineaTransporteRoutes)
+app.use("/api/choferes", choferRoutes)
+app.use("/api/trailers", trailerRoutes)
+app.use("/api/cajas", cajaRoutes)
+app.use("/api/piso-anterior", pisoAnteriorRoutes)
+app.use("/api/piso-actual", pisoActualRoutes)
+app.use("/api/pallets", palletRoutes)
+app.use("/api/inventario-productos", productoInventarioRoutes)
+app.use("/api/reportes-empaque", reporteEmpaqueRoutes)
 
 const PORT = 4000
 app.listen(PORT, () => {

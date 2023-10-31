@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const LineaTransporteSchema = mongoose.Schema({
     nombre: {
@@ -15,4 +15,4 @@ const LineaTransporteSchema = mongoose.Schema({
 
 const LineaTransporte = mongoose.model("LineaTransporte", LineaTransporteSchema)
 
-export default LineaTransporte
+module.exports = LineaTransporte

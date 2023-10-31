@@ -1,4 +1,4 @@
-import Marca from "../models/Marca.js"
+const Marca = require("../models/Marca.js")
 
 const registrarMarca = async (req, res) => {
   const { nombre } = req.body
@@ -121,7 +121,7 @@ const eliminarMarca = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarMarca,
   obtenerMarcas,
   obtenerMarca,

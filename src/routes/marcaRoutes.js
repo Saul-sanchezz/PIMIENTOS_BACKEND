@@ -1,13 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-import {
+const  {
   registrarMarca,
   obtenerMarcas,
   obtenerMarca,
   editarMarca,
   eliminarMarca,
-} from "../controllers/marcaController.js"
+} = require("../controllers/marcaController.js")
 
 router.route("/")
   .post(registrarMarca)
@@ -19,4 +18,4 @@ router.delete("/eliminar/:id", eliminarMarca)
 
 
 
-export default router
+module.exports = router

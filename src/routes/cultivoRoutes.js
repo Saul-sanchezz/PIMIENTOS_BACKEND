@@ -1,14 +1,12 @@
-import express from "express";
+const express = require("express");
 const router = express.Router()
-import checkAuth from "../middleware/checkAuth.js"
-
-import {
-    registrarCultivo,
-    obtenerCultivos,
-    obtenerCultivo,
-    editarCultivo,
-    eliminarCultivo,
-} from "../controllers/cultivoController.js"
+const {
+  registrarCultivo,
+  obtenerCultivos,
+  obtenerCultivo,
+  editarCultivo,
+  eliminarCultivo,
+} = require("../controllers/cultivoController.js")
 
 router.route("/")
   .post(registrarCultivo)
@@ -20,4 +18,4 @@ router.delete("/eliminar/:id", eliminarCultivo)
 
 
 
-export default router
+module.exports = router

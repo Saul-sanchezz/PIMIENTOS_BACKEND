@@ -1,4 +1,4 @@
-import PisoAnterior from "../models/PisoAnterior.js"
+const PisoAnterior = require("../models/PisoAnterior.js")
 
 const registrarPisoAnterior = async (req, res) => {
   const { cantidadCajas, cultivo, tamano, marca, envase } = req.body
@@ -112,7 +112,7 @@ const eliminarPisoAnteriorId = async (req, res) => {
   }
 }
 
-export {
+module.exports = {
   registrarPisoAnterior,
   obtenerPisoAnteriorAll,
   obtenerPisoAnteriorId,

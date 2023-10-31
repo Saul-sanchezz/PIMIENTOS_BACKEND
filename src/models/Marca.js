@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const MarcaSchema = mongoose.Schema({
     nombre: {
@@ -15,4 +15,4 @@ const MarcaSchema = mongoose.Schema({
 
 const Marca = mongoose.model("Marca", MarcaSchema)
 
-export default Marca
+module.exports = Marca
