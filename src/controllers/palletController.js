@@ -526,9 +526,9 @@ const obtenerDetalles = async (req, res) => {
 const buscarPorFecha = async (req, res) => {
   const query = req.query
   const { fecha } = query
-
+  
   try {
-    const pallets = await Pallet.find({ creado: fecha })
+    const pallets = await Pallet.find({ creado: fecha.split("-") })
     // if (pallets.length === 0) {
     //   const error = new Error("No hay Pallets por mostrar")
     //   return res.status(404).json({ msg: error.message });
