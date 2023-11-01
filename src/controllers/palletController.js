@@ -528,7 +528,7 @@ const buscarPorFecha = async (req, res) => {
   const { fecha } = query
   
   try {
-    const pallets = await Pallet.find({ creado: fecha.split("-") })
+    const pallets = await Pallet.find({ creado: fecha })
     // if (pallets.length === 0) {
     //   const error = new Error("No hay Pallets por mostrar")
     //   return res.status(404).json({ msg: error.message });
