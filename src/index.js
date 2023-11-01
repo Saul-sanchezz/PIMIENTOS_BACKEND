@@ -1,7 +1,6 @@
 const express = require("express");
 // const dotenv = require("dotenv")
-// import cors from "cors"
-// const cors = require("cors")
+const cors = require("cors")
 const conectarDB = require("./config/db.js")
 const usuarioRoutes = require("./routes/usuarioRoutes.js")
 const manifiestoRoutes = require("./routes/manifiestoRoutes.js")
@@ -28,21 +27,21 @@ app.use(express.json())
 
 conectarDB()
 
-// const whitelist = [
-//   process.env.FRONTEND_URL,
-// ]
+const whitelist = [
+  process.env.FRONTEND_URL,
+]
 
-// const corsOptions = {
-//   origin: function(origin, callback) {
-//     if (whitelist.includes(origin)) {
-//       callback(null, true)
-//     } else {
-//       callback(new Error("Error de cors"))
-//     }
-//   }
-// }
+const corsOptions = {
+  origin: function(origin, callback) {
+    if (whitelist.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error("Error de cors"))
+    }
+  }
+}
 
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 
 app.use("/api/usuarios", usuarioRoutes)
 app.use("/api/nacional-manifiestos", manifiestoRoutes)
@@ -64,7 +63,7 @@ app.use("/api/reportes-empaque", reporteEmpaqueRoutes)
 
 const PORT = 4000
 app.listen(PORT, () => {
-  console.log(`database conectado en el puerto ${PORT}`)
+  console.log(`servidor conectado en el puerto ${PORT}`)
 })
 
 
